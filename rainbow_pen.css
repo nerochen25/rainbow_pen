@@ -19,35 +19,56 @@ html, body {
 }
 
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;
     appearance: none;
-    width: 20%; /* Full-width */
-    height: 25px; /* Specified height */
-    background: #d3d3d396; /* Grey background */
-    outline: auto; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    width: 20%; 
+    height: 25px; 
+    background: #d3d3d396; 
+    outline: auto; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
     transition: opacity .2s;
   }
 
   .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1; 
   }
   
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
   .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px; 
+    height: 25px; 
+    background: #4CAF50; 
+    cursor: pointer; 
   }
   
   .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px; 
+    height: 25px; 
+    background: #4CAF50; 
+    cursor: pointer;
+  }
+
+  .btns-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+
+  .button {
+    box-sizing: inherit;
+    background-color: #009E74;
+    color: #FFFFFF !important;
+    height: 2rem;
+    padding: 0 2.4rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
+  .button:hover {
+    background: black;
+    transition: all 0.25s ease-in-out !important;
+  }
