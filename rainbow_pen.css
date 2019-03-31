@@ -2,3 +2,13 @@ html, body {
     margin: 0;
 }
 
+.inputs-div {
+    height: 50px;
+    background: url('https://image.freepik.com/free-photo/vintage-colorful-wood-background_1484-231.jpg');
+    display: flex;
+    align-items: center;
+}
+
+#line-size-input {
+    background: transparent;
+}
