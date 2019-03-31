@@ -6,7 +6,7 @@ const saturation = document.querySelector('#saturation-range');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight - 180;
-ctx.strokeStyle = "#BADASS";
+ctx.strokeStyle = "#STAR";
 // ctx.lineJoin = "round";
 // ctx.lineCap = "round";
 ctx.lineWidth = 20;
@@ -54,14 +54,14 @@ function draw(e) {
         hue = 0;
     };
 
-    if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-        direction = !direction;
-    }
-    if (direction) {
-        // ctx.lineWidth++;
-    } else {
-        // ctx.lineWidth--;
-    }
+    // if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+    //     direction = !direction;
+    // }
+    // if (direction) {
+    //     // ctx.lineWidth++;
+    // } else {
+    //     // ctx.lineWidth--;
+    // }
 }
 
 canvas.addEventListener('mousemove', draw);
