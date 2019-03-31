@@ -2,7 +2,7 @@ const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight - 100;
 ctx.strokeStyle = "#BADASS";
 // ctx.lineJoin = "round";
 // ctx.lineCap = "round";
