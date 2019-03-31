@@ -4,7 +4,7 @@ html, body {
 }
 
 .inputs-div {
-    height: 50px;
+    height: 150px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,5 +15,10 @@ html, body {
     background: transparent;
     border-radius: 10px;
     font-size: 20pt;
-    text-align: center;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
 }
