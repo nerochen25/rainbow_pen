@@ -4,11 +4,13 @@ html, body {
 
 .inputs-div {
     height: 50px;
-    background: url('https://image.freepik.com/free-photo/vintage-colorful-wood-background_1484-231.jpg');
     display: flex;
     align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 #line-size-input {
     background: transparent;
+    border-radius: 10px;
 }
