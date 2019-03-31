@@ -1,5 +1,8 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
+const lineWidth = document.querySelector('#line-width-range');
+const lightness = document.querySelector('#lightness-range');
+const saturation = document.querySelector('#saturation-range');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight - 180;
@@ -9,16 +12,37 @@ ctx.strokeStyle = "#BADASS";
 ctx.lineWidth = 20;
 ctx.globalCompositeOperation = 'multiply';
 
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-let hue = 0;
-let direction = true;
+let isDrawing = false,
+    lastX = 0,
+    lastY = 0,
+    hue = 0,
+    saturationVal = 100,
+    lightnessVal = 75,
+    direction = true;
+
+lineWidth.value = ctx.lineWidth;
+lightness.value = lightnessVal;
+saturation.value = saturationVal;
+
+lineWidth.addEventListener('change', (e) => {
+    let newLineWidth = parseInt(e.target.value);
+    ctx.lineWidth = newLineWidth;
+});
+
+saturation.addEventListener('change', (e) => {
+    let newSaturation = e.target.value;
+    saturationVal = newSaturation;
+})
+
+lightness.addEventListener('change', (e) => {
+    let newLightness = e.target.value;
+    lightnessVal = newLightness
+});
 
 function draw(e) {
     if (!isDrawing) return; //
 
-    ctx.strokeStyle = `hsl(${hue}, 100%, 75%)`;
+    ctx.strokeStyle = `hsl(${hue}, ${saturationVal}%, ${lightnessVal}%)`; 
     ctx.beginPath();
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(e.offsetX, e.offsetY);

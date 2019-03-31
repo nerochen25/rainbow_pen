@@ -7,11 +7,12 @@ html, body {
     height: 190px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 20px;
+    justify-content: space-evenly;
 }
 
-#line-size-input {
+#line-width-range {
     border-radius: 10px;
     font-size: 20pt;
 }
