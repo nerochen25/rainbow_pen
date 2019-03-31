@@ -3,6 +3,9 @@ const ctx = canvas.getContext('2d');
 const lineWidth = document.querySelector('.line-width-range');
 const lightness = document.querySelector('.lightness-range');
 const saturation = document.querySelector('.saturation-range');
+const goBackBtn = document.querySelector('.go-back-btn');
+const restartBtn = document.querySelector('.restart-btn');
+
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight - 180;
@@ -68,6 +71,16 @@ canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];
+
 });
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
+
+// goBackBtn.addEventListener('click', (e) => {
+//     lastX = 0;
+//     lastY = 0;
+// })
+
+restartBtn.addEventListener('click', () => {
+    location.reload(true);
+})
