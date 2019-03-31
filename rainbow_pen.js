@@ -1,8 +1,8 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
-const lineWidth = document.querySelector('#line-width-range');
-const lightness = document.querySelector('#lightness-range');
-const saturation = document.querySelector('#saturation-range');
+const lineWidth = document.querySelector('.line-width-range');
+const lightness = document.querySelector('.lightness-range');
+const saturation = document.querySelector('.saturation-range');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight - 180;
